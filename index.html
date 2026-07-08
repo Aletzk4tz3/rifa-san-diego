@@ -2,82 +2,146 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Rifa | Parroquia de San Diego de Alcalá</title>
 
     <meta name="description"
-        content="Participa en la rifa para apoyar la restauración de nuestra Virgen. Conoce los premios y sé parte de esta noble causa.">
+        content="Participa en la rifa para apoyar la restauración de nuestra Virgen. Conoce los premios y forma parte de esta noble causa.">
 
     <meta name="author" content="Parroquia de San Diego de Alcalá">
 
     <link rel="stylesheet" href="styles.css">
+
     <link rel="icon" href="assets/favicon.ico">
+
 </head>
 
 <body>
 
-    <header>
+    <!-- =======================
+            HERO
+    ======================== -->
+
+    <header class="hero">
 
         <div class="container">
 
-            <h1>Parroquia de San Diego de Alcalá</h1>
+            <span class="badge">
+                ✨ Rifa con causa
+            </span>
 
-            <h2>Rifa para la Restauración de Nuestra Virgen</h2>
+            <h1>
+                Parroquia de San Diego de Alcalá
+            </h1>
 
-            <p>
+            <p class="subtitle">
+                Rifa para la Restauración de Nuestra Virgen
+            </p>
+
+            <p class="description">
+
                 Gracias por formar parte de esta misión.
+
                 Con tu apoyo contribuimos a la restauración y conservación
                 de nuestra Virgen.
+
             </p>
+
+            <div id="contador"></div>
+
+            <a href="#premios" class="btn">
+                🎁 Ver Premios
+            </a>
 
         </div>
 
     </header>
 
+    <!-- =======================
+            MAIN
+    ======================== -->
+
     <main>
 
-        <!-- Imagen principal -->
-        <section id="banner">
+        <!-- =======================
+                BANNER
+        ======================== -->
+
+        <section id="banner" class="fade">
 
             <div class="container">
 
                 <img
                     src="assets/premios.jpg"
-                    alt="Premios de la rifa">
+                    alt="Premios de la Rifa">
 
             </div>
 
         </section>
 
-        <!-- Premios -->
-        <section id="premios">
+        <!-- =======================
+                PREMIOS
+        ======================== -->
+
+        <section id="premios" class="fade">
 
             <div class="container">
 
-                <h2>Premios</h2>
+                <h2>
+                    🏆 Premios
+                </h2>
 
                 <div class="cards">
 
                     <article class="card">
-                        <h3>🥇 Primer Lugar</h3>
-                        <p>Ninja CREAMi</p>
+
+                        <div class="icon">🥇</div>
+
+                        <h3>Primer Lugar</h3>
+
+                        <p>
+                            Ninja CREAMi
+                        </p>
+
                     </article>
 
                     <article class="card">
-                        <h3>🥈 Segundo Lugar</h3>
-                        <p>Cafetera Hamilton Beach</p>
+
+                        <div class="icon">🥈</div>
+
+                        <h3>Segundo Lugar</h3>
+
+                        <p>
+                            Cafetera Hamilton Beach
+                        </p>
+
                     </article>
 
                     <article class="card">
-                        <h3>🥉 Tercer Lugar</h3>
-                        <p>Set de Fragancias y Jabón</p>
+
+                        <div class="icon">🥉</div>
+
+                        <h3>Tercer Lugar</h3>
+
+                        <p>
+                            Set de Fragancias y Jabón
+                        </p>
+
                     </article>
 
                     <article class="card">
-                        <h3>🎁 Cuarto Lugar</h3>
-                        <p>Regalo Sorpresa</p>
+
+                        <div class="icon">🎁</div>
+
+                        <h3>Cuarto Lugar</h3>
+
+                        <p>
+                            Regalo Sorpresa
+                        </p>
+
                     </article>
 
                 </div>
@@ -86,20 +150,88 @@
 
         </section>
 
-        <!-- Información -->
-        <section id="informacion">
+        <!-- =======================
+             INFORMACIÓN
+        ======================== -->
+
+        <section id="informacion" class="fade">
 
             <div class="container">
 
-                <h2>Información de la Rifa</h2>
+                <h2>
+                    📋 Información del Sorteo
+                </h2>
 
-                <ul>
+                <div class="info">
 
-                  <li><strong>🎟️ Costo del boleto:</strong> $70.00 MXN</li>
-                  <li><strong>📅 Fecha del sorteo:</strong> 15 de agosto de 2026</li>
-                  <li><strong>📍 Lugar:</strong> Parroquia de San Diego de Alcalá</li>
+                    <div class="info-item">
 
-                </ul>
+                        <span>🎟️</span>
+
+                        <div>
+
+                            <strong>Costo del boleto</strong>
+
+                            <p>$70.00 MXN</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>📅</span>
+
+                        <div>
+
+                            <strong>Fecha del sorteo</strong>
+
+                            <p>15 de agosto de 2026</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>📍</span>
+
+                        <div>
+
+                            <strong>Lugar</strong>
+
+                            <p>Parroquia de San Diego de Alcalá</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =======================
+             AGRADECIMIENTO
+        ======================== -->
+
+        <section class="gracias fade">
+
+            <div class="container">
+
+                <h2>
+                    ❤️ ¡Gracias por tu apoyo!
+                </h2>
+
+                <p>
+
+                    Cada boleto representa una ayuda para continuar con la
+                    restauración de nuestra Virgen.
+
+                    Gracias por confiar y formar parte de esta noble causa.
+
+                </p>
 
             </div>
 
@@ -107,21 +239,35 @@
 
     </main>
 
+    <!-- =======================
+            FOOTER
+    ======================== -->
+
     <footer>
 
         <div class="container">
 
             <p>
+
                 © 2026 Parroquia de San Diego de Alcalá
+
             </p>
 
             <p>
-                Gracias por apoyar la restauración de nuestra Virgen.
+
+                Desarrollado con ❤️ para apoyar esta causa.
+
             </p>
 
         </div>
 
     </footer>
+
+    <button id="btnTop" title="Ir arriba">
+
+        ↑
+
+    </button>
 
     <script src="script.js"></script>
 
