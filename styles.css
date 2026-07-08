@@ -1,5 +1,32 @@
+/* =====================================================
+   RIFA SAN DIEGO 2026
+   Estilos v2.0
+===================================================== */
+
+:root{
+
+    --primary:#123D77;
+    --primary-dark:#0B2A52;
+    --gold:#D4AF37;
+    --gold-light:#F3D46B;
+
+    --background:#F5F7FB;
+    --white:#FFFFFF;
+
+    --text:#2E3A59;
+    --gray:#666;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --shadow-hover:0 20px 45px rgba(0,0,0,.15);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+}
+
 /* ==========================
-   RESET
+        RESET
 ========================== */
 
 *{
@@ -9,217 +36,508 @@
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background:#f7f8fc;
-    color:#1d3557;
-    line-height:1.6;
+
+    font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
 }
 
 /* ==========================
-   GENERAL
+      CONTENEDOR
 ========================== */
 
 .container{
-    width:min(1100px,90%);
+
+    width:min(1100px,92%);
+
     margin:auto;
-}
 
-section{
-    padding:70px 0;
-}
-
-h1,h2,h3{
-    font-weight:700;
-}
-
-h1{
-    font-size:3rem;
-}
-
-h2{
-    font-size:2rem;
-    margin-bottom:20px;
-}
-
-p{
-    color:#555;
 }
 
 /* ==========================
-   HEADER
+         HERO
 ========================== */
 
-header{
+.hero{
 
-    background:linear-gradient(
-        135deg,
-        #0f2c5c,
-        #234b84
-    );
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:80px 20px;
 
     color:white;
-    text-align:center;
-    padding:80px 20px;
+
+    background:
+
+    linear-gradient(
+
+        rgba(8,32,68,.88),
+
+        rgba(8,32,68,.88)
+
+    ),
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-dark)
+
+    );
+
 }
 
-header h2{
+.badge{
 
-    color:#d8b25a;
+    display:inline-block;
 
-    margin:20px 0;
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    margin-bottom:25px;
+
+    backdrop-filter:blur(8px);
+
+    font-weight:600;
+
 }
 
-header p{
+.hero h1{
 
-    color:#f3f3f3;
+    font-size:clamp(2.2rem,5vw,4rem);
 
-    max-width:700px;
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    color:var(--gold);
+
+    font-size:clamp(1.2rem,3vw,1.8rem);
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+}
+
+.description{
+
+    max-width:750px;
 
     margin:auto;
+
+    color:#f0f0f0;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
 }
 
 /* ==========================
-   BANNER
+      CONTADOR
+========================== */
+
+#contador{
+
+    margin-top:40px;
+
+    margin-bottom:40px;
+
+    font-size:1.35rem;
+
+    font-weight:bold;
+
+    color:var(--gold-light);
+
+}
+
+/* ==========================
+       BOTÓN
+========================== */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--gold);
+
+    color:var(--primary);
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--white);
+
+}
+
+/* ==========================
+      SECCIONES
+========================== */
+
+section{
+
+    padding:90px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:2.2rem;
+
+    color:var(--primary);
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+        BANNER
 ========================== */
 
 #banner{
 
-    text-align:center;
+    padding-top:60px;
+
 }
 
 #banner img{
 
     width:100%;
 
-    max-width:900px;
+    display:block;
 
-    border-radius:18px;
+    margin:auto;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    border-radius:25px;
 
-    transition:.4s;
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
 }
 
 #banner img:hover{
 
-    transform:scale(1.02);
+    transform:scale(1.015);
+
 }
 
 /* ==========================
-   PREMIOS
+        TARJETAS
 ========================== */
 
 .cards{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 
-    gap:25px;
+    gap:30px;
 
-    margin-top:35px;
 }
 
 .card{
 
-    background:white;
+    background:var(--white);
 
-    border-radius:16px;
+    padding:35px;
 
-    padding:30px;
+    border-radius:var(--radius);
 
     text-align:center;
 
-    border-top:6px solid #d4af37;
+    box-shadow:var(--shadow);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:var(--transition);
 
-    transition:.35s;
+    border-top:6px solid var(--gold);
+
 }
 
 .card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    box-shadow:var(--shadow-hover);
+
+}
+
+.card .icon{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
 }
 
 .card h3{
 
-    color:#123d77;
+    color:var(--primary);
 
     margin-bottom:15px;
+
+    font-size:1.4rem;
+
 }
 
 .card p{
 
-    font-size:18px;
+    color:var(--gray);
 
-    font-weight:600;
+    font-size:1.05rem;
+
 }
 
 /* ==========================
-   INFORMACIÓN
+      INFORMACIÓN
 ========================== */
 
-#informacion{
+.info{
+
+    display:grid;
+
+    gap:22px;
+
+}
+
+.info-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
 
     background:white;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
 }
 
-#informacion ul{
+.info-item:hover{
 
-    list-style:none;
+    transform:translateX(8px);
 
-    margin-top:20px;
 }
 
-#informacion li{
+.info-item span{
 
-    padding:14px;
+    font-size:2rem;
 
-    border-bottom:1px solid #ececec;
+}
 
-    font-size:18px;
+.info-item strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:var(--primary);
+
+}
+
+.info-item p{
+
+    color:var(--gray);
+
 }
 
 /* ==========================
-   FOOTER
+      AGRADECIMIENTO
+========================== */
+
+.gracias{
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-dark)
+
+    );
+
+    color:white;
+
+    text-align:center;
+
+    border-radius:35px 35px 0 0;
+
+}
+
+.gracias h2{
+
+    color:white;
+
+}
+
+.gracias p{
+
+    color:#f2f2f2;
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+        FOOTER
 ========================== */
 
 footer{
 
-    background:#0f2c5c;
+    background:#081F3D;
 
     color:white;
 
     text-align:center;
 
     padding:35px 20px;
+
 }
 
 footer p{
 
-    color:white;
+    color:#ddd;
 
     margin:8px 0;
+
 }
 
 /* ==========================
-   ANIMACIONES
+      BOTÓN TOP
+========================== */
+
+#btnTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    z-index:999;
+
+}
+
+#btnTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#btnTop:hover{
+
+    transform:translateY(-5px);
+
+    background:white;
+
+}
+
+/* ==========================
+      ANIMACIONES
 ========================== */
 
 .fade{
 
     opacity:0;
 
-    transform:translateY(35px);
+    transform:translateY(45px);
 
     transition:all .8s ease;
+
 }
 
 .fade.show{
@@ -227,27 +545,161 @@ footer p{
     opacity:1;
 
     transform:translateY(0);
+
 }
 
 /* ==========================
-   RESPONSIVE
+      SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e8e8e8;
+
+}
+
+/* ==========================
+      RESPONSIVE TABLET
+========================== */
+
+@media(max-width:900px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding:70px 20px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================
+      RESPONSIVE CELULAR
 ========================== */
 
 @media(max-width:768px){
 
-    h1{
+    section{
 
-        font-size:2.2rem;
+        padding:60px 0;
+
     }
 
-    h2{
+    .hero{
 
-        font-size:1.6rem;
+        padding:50px 18px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .subtitle{
+
+        font-size:1.25rem;
+
+    }
+
+    .description{
+
+        font-size:1rem;
+
+    }
+
+    #contador{
+
+        font-size:1.1rem;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        padding:18px;
+
+        font-size:1rem;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
     }
 
     .card{
 
-        padding:25px;
+        padding:28px;
+
+    }
+
+    .info-item{
+
+        align-items:flex-start;
+
+    }
+
+    .info-item span{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/* ==========================
+      RESPONSIVE PEQUEÑO
+========================== */
+
+@media(max-width:420px){
+
+    .hero h1{
+
+        font-size:1.9rem;
+
+    }
+
+    section h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .badge{
+
+        font-size:.9rem;
+
+    }
+
+    .description{
+
+        line-height:1.7;
+
     }
 
 }
